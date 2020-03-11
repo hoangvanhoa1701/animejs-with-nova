@@ -1,0 +1,100 @@
+.squareToCircle {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+#cssSelector {
+  position: relative;
+  height: 100px;
+}
+#cssSelector .shadow {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: absolute;
+  opacity: 0.2;
+}
+#cssSelector .el {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: absolute;
+  left: 500px;
+  opacity: 1;
+}
+
+.square-mini{
+  width: 300px;
+  height: 300px;
+}
+
+.custom-square-demo{
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ball {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+
+.segment {
+  width: 0px;
+  height: 25px;
+  background-color: lime;
+  float: left;
+}
+#body {
+  width: 60px;
+  height: 25px;
+  border: solid grey 5px;
+  float: left;
+}
+#head {
+  width: 5px;
+  height: 15px;
+  margin-top: 10px;
+  background-color: grey;
+  float: left;
+}
+
+/* /////////////////////// */
+.custom-square-to-circle{
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333333;
+  border-radius: 50%;
+}
+.custom-square{
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+#square{
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  /* border-radius: 50%; */
+  background-color: green;
+}
