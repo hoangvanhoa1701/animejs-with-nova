@@ -1,3 +1,4 @@
+//////////// START Square To Circle
 var squareToCircle = anime({
   targets: '.squareToCircle',
   translateX: 500,
@@ -8,7 +9,9 @@ var squareToCircle = anime({
   endDelay: 1000,
   loop: true
 });
+//////////// END Square To Circle
 
+//////////// START CSS SELECTOR
 function cssSelector() {
   anime({
     targets: '#cssSelector .el',
@@ -18,9 +21,11 @@ function cssSelector() {
     easing: 'easeInOutQuad',
   });
 }
+//////////// END CSS SELECTOR
 
+//////////// START ROUND
 var roundLogEl = document.querySelector('.round');
-
+round();
 function round() {
   anime({
     targets: roundLogEl,
@@ -29,27 +34,9 @@ function round() {
     round: 10 // Will round the animated value to 1 decimal
   });
 }
+//////////// END ROUND
 
-anime({
-  targets: '.specific-prop-params-demo .el',
-  translateX: {
-    value: 250,
-    duration: 800
-  },
-  rotate: {
-    value: 360,
-    duration: 1800,
-    easing: 'easeInOutSine'
-  },
-  scale: {
-    value: 2,
-    duration: 1600,
-    delay: 800,
-    easing: 'easeInOutQuart'
-  },
-  delay: 250 // All properties except 'scale' inherit 250ms delay
-});
-
+//////////// START Xoay vòng vào trong
 anime({
   targets: '.custom-square-demo .el',
   rotate: [360, -360],
@@ -66,20 +53,22 @@ function customSquareDemo() {
       value: function(el, i) {
         return i-0.001;
       },
-      easing: 'easeInOutSine'
+      easing: 'linear'
     },
     height: {
       value: function(el, i) {
         return i-0.001;
       },
-      easing: 'easeInOutSine'
+      easing: 'linear'
     },
     easing: 'linear',
     duration: 16000,
   });
 }
+//////////// END Xoay vòng vào trong
 
-var animation = anime({
+//////////// START segment
+var segment = anime({
   targets: '.segment',
   width: 20,
   duration: 300,
@@ -91,8 +80,28 @@ var animation = anime({
   loop: true
 });
 
+var logEl = document.querySelector('#progress');
+var battery = {
+  charged: '0%',
+}
+var label = anime({
+  targets: battery,
+  charged: '100%',
+  round: 1,
+  easing: 'linear',
+  duration: 30000,
+  update: function() {
+    logEl.innerHTML = battery.charged;
+  },
+  complete: function() {
+    segment.pause();
+    segment.seek(segment.duration);
+  }  
+});
+//////////// END segment
 
-//// custom-square-to-circle
+
+//////////// START Hình vuông xoay quanh hình tròn
 anime({
   targets: '.custom-square-to-circle .el',
   rotate: [360, -360],
@@ -120,3 +129,13 @@ var clickCustomSquareToCircle = anime({
 document.querySelector('.custom-square-to-circle-play').onclick = clickCustomSquareToCircle.play;
 document.querySelector('.custom-square-to-circle-pause').onclick = clickCustomSquareToCircle.pause;
 document.querySelector('.custom-square-to-circle-restart').onclick = clickCustomSquareToCircle.restart;
+//////////// END Hình vuông xoay quanh hình tròn
+
+//////////// START 
+//////////// END 
+
+//////////// START 
+//////////// END 
+
+//////////// START 
+//////////// END 
